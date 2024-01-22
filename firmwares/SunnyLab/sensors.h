@@ -8,13 +8,13 @@
 
 int previousPPM = -1;
 
-Adafruit_BMP280 bmp(0x68);
-HTU21D htu();
+Adafruit_BMP280 bmp;
+HTU21D htu;
 MQ135 gasSensor = MQ135(A0);
 
 void setupSensors(){
-  bmp.begin(&Wire);
-  htu.begin(&Wire);
+  bmp.begin(0x76);
+  htu.begin();
 }
 
 int getPreassure(){

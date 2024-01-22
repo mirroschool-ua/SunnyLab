@@ -122,11 +122,11 @@ void drawDate(uint16_t year, byte month, byte day, byte weekday){
 
     if (true) {
       lcd.setCursor(16, 3);
+      lcd.print("20");
       lcd.print(year);
     } else {
       lcd.setCursor(18, 1);
-      int dayofweek = now.DayOfWeek();
-      lcd.print(dayNames[dayofweek]);
+      lcd.print(dayNames[weekday]);
     }
   }
 }
@@ -149,7 +149,7 @@ void drawHumidity(int humidity){
     lcd.setCursor(0, 3);
   }
 
-  lcd.print(String(humidity) + " %");
+  lcd.print(String(humidity) + " % ");
 }
 
 void drawPPM(int ppm){
