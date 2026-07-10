@@ -1,1 +1,1 @@
-# SunnyLab
+# STEM-набір метеостанція SunnyLab
